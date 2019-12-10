@@ -1,11 +1,14 @@
 import React from 'react'
+import './style.css'
 
 
 class Card extends React.Component {
     render() {
         return (
             <div className="Card">
-                <p>I am the card component</p>
+               <button type='button'>
+                   Delete this
+                </button>
                 <h3>{this.props.title}</h3>
                 <p>{this.props.content}</p>
             </div>
