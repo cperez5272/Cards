@@ -1,18 +1,24 @@
 import React from 'react'
 import './style.css'
+import Card from './Card.js'
 
 
 class List extends React.Component {
+    createCards = () => {
+        return this.props.STORE.allCards.map(card =>{
+            return <Card key={card.id} title={card.title} header={card.header} />
+        })
+    }
     render() {
         console.log(this.props)
         return (
             <div>
                 <section className="List">
                     <header>
-                        {this.props.header}
+                        <h2>{this.createCards()}</h2>
                     </header>
                     <div className="List-cards">
-                        {this.props.cards}
+                        {this.createCards()}
                     </div>
                 </section>
             </div>

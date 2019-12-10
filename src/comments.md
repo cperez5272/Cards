@@ -1,4 +1,4 @@
-if store.js did not exist you would have to use static
+1. if store.js did not exist you would have to use static. In static you would have to add all the infomation you got from Store.js to make things work. 
 
   static defaultProp = {
     store: {
@@ -7,8 +7,6 @@ if store.js did not exist you would have to use static
     }
   }
 
-In there you would have to inculde all the infomation that store.js has.
+2. Need to use export in Store.js so that it can be used anywhere.
 
-Need to use export in Store.js so that it can be used anywhere.
-
-Since App component want to only take in one prop we inculde STORE in index.js (look at it to see)
+4. Since App component want to only take in one prop we inculde STORE in index.js (look at it to see)

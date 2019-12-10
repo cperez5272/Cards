@@ -2,15 +2,14 @@ import React from 'react';
 import List from './List.js';
 import Card from './Card.js';
 import './style.css'
+import {STORE} from './Store.js'
 
 class App extends React.Component {
-
   createLists = () => {
-    return this.props.STORE.lists.map(list =>{
-      return <List key={list.id} header={list.header} cardIds={list.cardIds}/>
-    })
+    return STORE.lists.map(list =>{
+      return <List key={list.id} header={list.header} cardIds={list.cardIds} />
+    });
   }
-
   render() {
     console.log(this.props)
     return (
