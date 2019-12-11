@@ -10,7 +10,7 @@ class App extends React.Component {
       const cards = list.cardIds.map(id => {
         return STORE.allCards[id];
       });
-      return <List store={STORE} key={list.id} header={list.header} cardIds={cards} />
+      return <List store={STORE} key={list.id} header={list.header} cards={cards} />
     });
   }
   render() {
