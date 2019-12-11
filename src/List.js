@@ -4,8 +4,11 @@ import Card from './Card.js'
 
 class List extends React.Component {
     createCards = () => {
-         this.props.store.allCards
-            return <Card key={store.id} title={store.title} content={store.content} />
+         const cardGame = Object.keys(this.props.store.allCards)
+         console.log(cardGame)
+         for(const game of cardGame) {
+            return <Card key={game.id} title={game.title} content={game.content} />
+         }
     }
     render() {
         console.log(this.props)
