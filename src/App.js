@@ -2,7 +2,7 @@ import React from 'react';
 import List from './List.js';
 import Card from './Card.js';
 import './style.css'
-import { STORE } from './Store.js'
+import STORE from './Store.js'
 
 class App extends React.Component {
   createLists = () => {
@@ -10,7 +10,7 @@ class App extends React.Component {
       const cards = list.cardIds.map(id => {
         return STORE.allCards[id];
       });
-      return <List key={list.id} header={list.header} cardIds={cards} />
+      return <List store={STORE} key={list.id} header={list.header} cardIds={cards} />
     });
   }
   render() {

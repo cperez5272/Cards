@@ -1,12 +1,11 @@
 import React from 'react'
 import './style.css'
 import Card from './Card.js'
-import {STORE} from './Store.js'
 
 class List extends React.Component {
     createCards = () => {
-        return STORE.allCards.map(card =>{
-            return <Card key={this.props.cards.card.id} title={this.props.cards.card.title} content={this.props.cards.card.content} />
+        return this.props.STORE.allCards.map(card =>{
+            return <Card key={card.id} title={card.title} content={card.content} />
         })
     }
     render() {
