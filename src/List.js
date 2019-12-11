@@ -4,14 +4,13 @@ import Card from './Card.js'
 
 class List extends React.Component {
     createCards = () => {
-         const cardGame = Object.keys(this.props.store.allCards)
+         const cardGame = Object.values(this.props.store.allCards)
          console.log(cardGame)
          for(const game of cardGame) {
             return <Card key={game.id} title={game.title} content={game.content} />
          }
     }
     render() {
-        console.log(this.props)
         return (
             <div>
                 <section className="List">

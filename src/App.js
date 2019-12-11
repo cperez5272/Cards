@@ -14,7 +14,7 @@ class App extends React.Component {
     });
   }
   render() {
-    console.log(this.props)
+    console.log(STORE.lists)
     return (
       <main>
         <header>
@@ -22,6 +22,7 @@ class App extends React.Component {
             Card Game! Yaaaay!
           </h1>
           <div className='App-list'>
+            
             {this.createLists()}
             
           </div>
